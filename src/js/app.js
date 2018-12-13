@@ -21,6 +21,11 @@ let inputValue = document.getElementById("inputValue");     // 添加事项
 
 let completedList = document.getElementById("completedList");
 let todoList = document.getElementById("todoList");
+
+// 清除/完成操作按钮
+let clearTaskBtn = document.getElementById("clearTask");
+let finishTaskBtn = document.getElementById("finishTask");
+
 // 默认显示todo列表页面
 todoList.style.display = "block";
 
@@ -75,19 +80,40 @@ window.onload = function () {
 };
 
 /**
+ * @desc 清除/完成操作
+ * @date 2018-12-13
+ * @author XDP
+ */
+clearTaskBtn.onclick = function () {
+    console.log("delete");
+}
+finishTaskBtn.onclick = function () {
+    console.log("finish");
+    // model.completeTask(this.parent().find(".task-title").text());
+}
+
+/**
  * @desc 数据存储---本地
  * @date 2018-12-13
  * @author XDP
  */
 function Model() {
-    let addTask = function (s) {
+    let addTask = function (add) {      // 添加
         let taskItem = [localStorage["List_todo"]];
-        taskItem.push(s);
+        taskItem.push(add);
         localStorage.setItem("List_todo", taskItem);
         render.init();
     };
+    let completeTask = function (complete) {        //完成
+        let taskItem = [localStorage["List_completed"]];
+        taskItem.push(add);
+        localStorage.setItem("List_completed", taskItem);
+        render.init();
+    }
     return {
-        addTask: addTask
+        addTask: addTask,
+        completeTask: completeTask,
+        // clearTask: clearTask
     };
 }
 
@@ -100,8 +126,8 @@ function Render() {
     let tasks,
         taskTitle;
 
-    let init = function (el) {
-        var el = el || "todoList",
+    let init = function (e) {
+        var el = e || "todoList",
             listName;
 
         if (el === "todoList") {
@@ -121,10 +147,9 @@ function Render() {
                     "<li class='task-item'>"
                     + "<span class='task-title'>" + taskTitle + "</span>"
                     + "<i>" + i + "</i>"
-                    + "<div class='clearTask fa fa-trash-o'>" + "</div>"
-                    + "<div class='finishTask fa fa-check-circle-o'>" + "</div>"
+                    + "<div class='clearTask fa fa-trash-o' id='clearTask'>" + "</div>"
+                    + "<div class='finishTask fa fa-check-circle-o' id='finishTask'>" + "</div>"
                     + "</li>");
-                console.log(taskDom[0]);
                 // 注意，insertBefore必须插入节点，不能是字符串
                 ele.insertBefore(taskDom[0], ele.childNodes[0]);
             }
