@@ -12,11 +12,7 @@ header { /*顶部菜单栏样式*/
     top: 0;
     width: 100%;
     z-index: 5;
-    //-webkit-transition: top .4s ease, background-color .5s;
-    //-moz-transition: top .4s ease, background-color .5s;
-    //-ms-transition: top .4s ease, background-color .5s;
-    //-o-transition: top .4s ease, background-color .5s;
-    //transition: top .4s ease, background-color .5s;
+
     .appTitle { /*标题*/
         color: #fff;
         font-size: 22px;
@@ -35,22 +31,18 @@ header { /*顶部菜单栏样式*/
         padding: 0;
         position: absolute;
         top: 10px;
-
-        &:active {
-            background-color: rgba(255, 255, 255, .2);
-        }
     }
 
-    .appBackBtn { /*返回按钮*/
-        border-radius: 3px;
-        display: none;
-        height: 24px;
-        left: 5%;
-        padding: 5px;
-        position: absolute;
-        top: 15px;
-        width: 24px;
-    }
+    //.appBackBtn { /*返回按钮*/
+    //    border-radius: 3px;
+    //    display: none;
+    //    height: 24px;
+    //    left: 5%;
+    //    padding: 5px;
+    //    position: absolute;
+    //    top: 15px;
+    //    width: 24px;
+    //}
 }
 
 main { /*主体部分*/
@@ -77,12 +69,52 @@ main { /*主体部分*/
         }
     }
 
+    .task-item {
+        background-color: #fff;
+        border-radius: 3px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+        margin-bottom: 15px;
+        overflow: auto;
+        padding: 20px 0;
+        position: relative;
+        width: 370px;
+
+        &:last-child {
+            margin-bottom: 10px;
+        }
+
+        span {
+            font-size: 16px;
+            float: left;
+            width: 70%;
+            margin-left: 14px;
+            font-weight: 200;
+        }
+
+        i {
+            display: none;
+        }
+    }
+
+    .clearTask, .finishTask {
+        font-size: 30px;
+        position: absolute;
+        top: 12px;
+    }
+
+    .clearTask {
+
+        right: 52px;
+    }
+
+    .finishTask {
+        right: 12px;
+    }
 
     .addContent {
-        background-color: #ccf8ff;
+        background-color: #fff;
         height: 100%;
         left: 100%;
-        overflow: hidden;
         position: fixed;
         top: 100%;
         width: 100%;
@@ -94,12 +126,15 @@ main { /*主体部分*/
         transition: all .2s ease-out;
 
         textarea {
-            margin: 80px auto 0;
+            background-color: transparent;
+            border: 2px dotted #BDBDBD;
+            color: #212121;
             display: block;
-            font-size: 20px;
+            font-size: 22px;
+            padding: 5px;
             height: 40%;
-            padding: 10px;
-            width: 80%;
+            margin: 80px auto 0;
+            width: 90%;
         }
     }
 
@@ -122,11 +157,11 @@ main { /*主体部分*/
             right: 0;
             text-align: center;
             width: 60px;
-            z-index: 5;
+            z-index: 1;
         }
 
         .okAddBtn {
-            background-color: #555;
+            background-color: #757575;
             border-radius: 30px;
             bottom: 0;
             color: #fff;
