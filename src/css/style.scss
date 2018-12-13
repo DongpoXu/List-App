@@ -48,6 +48,7 @@ header { /*顶部菜单栏样式*/
 main { /*主体部分*/
     position: absolute;
     top: 80px;
+    width: 100%;
 
     .todo-list { /*待做事项*/
         display: none;
@@ -73,18 +74,14 @@ main { /*主体部分*/
         background-color: #fff;
         border-radius: 3px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-        margin-bottom: 15px;
-        overflow: auto;
+        height: 20px;
+        margin: 0 auto 15px;
         padding: 20px 0;
         position: relative;
-        width: 370px;
-
-        &:last-child {
-            margin-bottom: 10px;
-        }
+        width: 90%;
 
         span {
-            font-size: 16px;
+            font-size: 20px;
             float: left;
             width: 70%;
             margin-left: 14px;
@@ -97,13 +94,16 @@ main { /*主体部分*/
     }
 
     .clearTask, .finishTask {
-        font-size: 30px;
+        color: #888;
+        cursor: pointer;
+        font-size: 28px;
+        line-height: 28px;
+        padding: 4px;
         position: absolute;
         top: 12px;
     }
 
     .clearTask {
-
         right: 52px;
     }
 
@@ -121,7 +121,6 @@ main { /*主体部分*/
         z-index: 9;
         -webkit-transition: all .2s ease-out;
         -moz-transition: all .2s ease-out;
-        -ms-transition: all .2s ease-out;
         -o-transition: all .2s ease-out;
         transition: all .2s ease-out;
 
@@ -173,7 +172,6 @@ main { /*主体部分*/
             width: 60px;
             -webkit-transition: bottom .2s linear;
             -moz-transition: bottom .2s linear;
-            -ms-transition: bottom .2s linear;
             -o-transition: bottom .2s linear;
             transition: bottom .2s linear;
         }
