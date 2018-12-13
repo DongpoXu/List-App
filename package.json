@@ -2,7 +2,7 @@
   "name": "list-app",
   "version": "0.0.1",
   "description": "个人使用待办事项列表App",
-  "main": "src/index.js",
+  "main": "src/js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
