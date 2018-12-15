@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9d922c23-77da-4a89-b2c6-287618809f1e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -59,9 +58,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="327">
-                  <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+                <state relative-caret-position="513">
+                  <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
                   <folding>
+                    <element signature="e#548#602#0" />
                     <element signature="e#273#333#0" />
                     <element signature="e#242#2172#0" />
                     <element signature="e#431#1091#0" />
@@ -79,7 +79,6 @@
                     <element signature="n#!!doc;n#Render#0" />
                     <element signature="n#!!block;n#Render#0" />
                     <element signature="e#4717#5732#0" />
-                    <element signature="e#5054#5726#0" />
                     <element signature="e#5775#5992#0" />
                     <element signature="n#!!doc;n#appColor#0" />
                     <element signature="n#!!block;n#appColor#0" />
@@ -222,7 +221,7 @@
       <workItem from="1544612313428" duration="2565000" />
       <workItem from="1544615184653" duration="5339000" />
       <workItem from="1544662970381" duration="21683000" />
-      <workItem from="1544837755928" duration="14384000" />
+      <workItem from="1544837755928" duration="15418000" />
     </task>
     <task id="LOCAL-00001" summary="可以添加待做事项，localStorage缓存。">
       <created>1544695553442</created>
@@ -315,11 +314,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544884305370</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="完成和计划切换 v0.0.1">
+      <created>1544885336370</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1544885336370</updated>
+    </task>
+    <task id="LOCAL-00015" summary="完成和计划切换 v0.0.1">
+      <created>1544886137455</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1544886137455</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43971000" />
+    <option name="totallyTimeSpent" value="45005000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -383,7 +396,8 @@
     <MESSAGE value="可以添加待做事项，localStorage缓存。" />
     <MESSAGE value="重写界面，引入jQuery" />
     <MESSAGE value="去掉清除缓存" />
-    <option name="LAST_COMMIT_MESSAGE" value="去掉清除缓存" />
+    <MESSAGE value="完成和计划切换 v0.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成和计划切换 v0.0.1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_book/index.html">
@@ -506,9 +520,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        <state relative-caret-position="513">
+          <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
           <folding>
+            <element signature="e#548#602#0" />
             <element signature="e#273#333#0" />
             <element signature="e#242#2172#0" />
             <element signature="e#431#1091#0" />
@@ -526,7 +541,6 @@
             <element signature="n#!!doc;n#Render#0" />
             <element signature="n#!!block;n#Render#0" />
             <element signature="e#4717#5732#0" />
-            <element signature="e#5054#5726#0" />
             <element signature="e#5775#5992#0" />
             <element signature="n#!!doc;n#appColor#0" />
             <element signature="n#!!block;n#appColor#0" />
