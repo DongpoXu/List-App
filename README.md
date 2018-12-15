@@ -14,6 +14,7 @@
 
 效果演示
 - <a href="https://aelousdp.github.io/List-App/" target="_blank">演示</a>
+- [演示](https://aelousdp.github.io/List-App/?_blank)
 
 快速使用文档
 - [如何使用](./doc/use/README.md)
