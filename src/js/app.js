@@ -4,8 +4,8 @@
  * @author XDP
  */
 // 清除之前项目的本地存储数据
-localStorage.removeItem("LIST_TODO");
-localStorage.removeItem("LIST_COMPLETED");
+// localStorage.removeItem("LIST_TODO");
+// localStorage.removeItem("LIST_COMPLETED");
 
 let model = Model(),
     render = Render();
