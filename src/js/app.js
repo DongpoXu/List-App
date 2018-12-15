@@ -28,7 +28,11 @@ let appMenuBtn = $("#appMenuBtn");
 todoList.show();
 
 // 切换完成以及计划
-appMenuBtn.on("click",function () {
+appMenuBtn.on("click", function () {
+    if ($("#completedList").html() === '') {
+        render.init('#completedList');
+    }
+    render.init('#completedList');
     todoList.toggle();
     completedList.toggle();
 });
