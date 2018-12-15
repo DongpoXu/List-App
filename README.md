@@ -4,7 +4,7 @@
 
 **List-App** --- 小而美的待办事项清单，使用简单。
 
-- 源码：[github.com/Aelousdp/To-do-list](https://github.com/Aelousdp/To-do-list) （欢迎 star）
+- 源码：[github.com/Aelousdp/List-App](https://github.com/Aelousdp/List-App) （欢迎 star）
 
 ## 安装下载
 
