@@ -71,9 +71,9 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="304">
-                    <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="278">
+                    <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -213,7 +213,7 @@
       <workItem from="1544612313428" duration="2565000" />
       <workItem from="1544615184653" duration="5339000" />
       <workItem from="1544662970381" duration="21683000" />
-      <workItem from="1544837755928" duration="7983000" />
+      <workItem from="1544837755928" duration="8218000" />
     </task>
     <task id="LOCAL-00001" summary="可以添加待做事项，localStorage缓存。">
       <created>1544695553442</created>
@@ -257,11 +257,25 @@
       <option name="project" value="LOCAL" />
       <updated>1544863429607</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="重写界面，引入jQuery">
+      <created>1544863588825</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1544863588825</updated>
+    </task>
+    <task id="LOCAL-00008" summary="重写界面，引入jQuery">
+      <created>1544863691397</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1544863691397</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37570000" />
+    <option name="totallyTimeSpent" value="37805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,9 +453,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="304">
-            <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="278">
+            <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           </first_editor>
           <second_editor />
         </state>
