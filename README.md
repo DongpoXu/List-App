@@ -12,15 +12,15 @@
 
 ## 快速使用
 
-快速使用文档
+效果演示
+- [演示](https://aelousdp.github.io/List-App/)
 
+快速使用文档
 - [如何使用](./doc/use/README.md)
 
 ## 交流 & 提问
 
-注意，作者只受理以下几种提问方式，其他方式会被直接忽略
-
-- 发送邮件至**806267856@qq.com**
+注意，只受理接收以下提问方式，其他方式会被直接忽略
 - 直接在 [github issues](https://github.com/Aelousdp/List-App/issues) 提交问题
 
 每次升级版本修复的问题记录在[这里](./ISSUE.md)
