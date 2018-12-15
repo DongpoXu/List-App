@@ -13,7 +13,7 @@ header { /*顶部菜单栏样式*/
     width: 100%;
     z-index: 5;
 
-    .appTitle { /*标题*/
+    .app-title { /*标题*/
         color: #fff;
         font-size: 22px;
         height: 100%;
@@ -22,7 +22,7 @@ header { /*顶部菜单栏样式*/
         text-align: center;
     }
 
-    .appMenuBtn { /*侧边栏按钮*/
+    .app-menu-btn { /*侧边栏按钮*/
         color: #fff;
         cursor: pointer;
         height: 40px;
@@ -84,7 +84,7 @@ main { /*主体部分*/
         }
     }
 
-    .clearTask, .finishTask {
+    .clear-task, .finish-task {
         color: #888;
         cursor: pointer;
         font-size: 28px;
@@ -94,15 +94,15 @@ main { /*主体部分*/
         top: 12px;
     }
 
-    .clearTask {
+    .clear-task {
         right: 52px;
     }
 
-    .finishTask {
+    .finish-task {
         right: 12px;
     }
 
-    .addContent {
+    .add-content {
         background-color: #fff;
         display: none;
         height: 100%;
@@ -125,7 +125,7 @@ main { /*主体部分*/
         }
     }
 
-    .btnBox { /*按钮*/
+    .btn-box { /*按钮*/
         bottom: 3%;
         //加入cursor会导致长按出现蓝色覆盖层
         //cursor: pointer;
@@ -133,7 +133,7 @@ main { /*主体部分*/
         right: 5%;
         z-index: 10;
 
-        .addBtn {
+        .add-btn {
             background-color: #FFC107;
             border-radius: 30px;
             bottom: 0;
@@ -154,7 +154,7 @@ main { /*主体部分*/
             transition: all .2s ease;
         }
 
-        .okAddBtn {
+        .ok-add-btn {
             background-color: #757575;
             border-radius: 30px;
             bottom: 0;
