@@ -58,8 +58,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="513">
-                  <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+                <state relative-caret-position="45">
+                  <caret line="115" column="35" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
                   <folding>
                     <element signature="e#548#602#0" />
                     <element signature="e#273#333#0" />
@@ -68,20 +68,13 @@
                     <element signature="e#1140#1682#0" />
                     <element signature="e#1761#2168#0" />
                     <element signature="e#2226#2285#0" />
-                    <element signature="e#2457#2465#0" />
                     <element signature="e#2607#2756#0" />
-                    <element signature="e#2809#2910#0" />
                     <element signature="n#!!doc;n#Model#0" />
-                    <element signature="n#!!block;n#Model#0" />
                     <element signature="e#3534#3708#0" />
                     <element signature="e#3753#4516#0" />
-                    <element signature="e#4557#4972#0" />
                     <element signature="n#!!doc;n#Render#0" />
-                    <element signature="n#!!block;n#Render#0" />
-                    <element signature="e#4717#5732#0" />
                     <element signature="e#5775#5992#0" />
                     <element signature="n#!!doc;n#appColor#0" />
-                    <element signature="n#!!block;n#appColor#0" />
                   </folding>
                 </state>
               </provider>
@@ -221,7 +214,7 @@
       <workItem from="1544612313428" duration="2565000" />
       <workItem from="1544615184653" duration="5339000" />
       <workItem from="1544662970381" duration="21683000" />
-      <workItem from="1544837755928" duration="15418000" />
+      <workItem from="1544837755928" duration="15968000" />
     </task>
     <task id="LOCAL-00001" summary="可以添加待做事项，localStorage缓存。">
       <created>1544695553442</created>
@@ -328,11 +321,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544886137455</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="完成和计划切换 v0.0.1">
+      <created>1544886363916</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1544886363916</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45005000" />
+    <option name="totallyTimeSpent" value="45555000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -359,7 +359,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49583334" weight="0.328934" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49583334" visible="true" weight="0.328934" />
       <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.5005952" side_tool="true" weight="0.328934" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32994923" />
@@ -520,8 +520,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="114" column="10" selection-start-line="114" selection-start-column="10" selection-end-line="114" selection-end-column="10" />
+        <state relative-caret-position="45">
+          <caret line="115" column="35" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
           <folding>
             <element signature="e#548#602#0" />
             <element signature="e#273#333#0" />
@@ -530,20 +530,13 @@
             <element signature="e#1140#1682#0" />
             <element signature="e#1761#2168#0" />
             <element signature="e#2226#2285#0" />
-            <element signature="e#2457#2465#0" />
             <element signature="e#2607#2756#0" />
-            <element signature="e#2809#2910#0" />
             <element signature="n#!!doc;n#Model#0" />
-            <element signature="n#!!block;n#Model#0" />
             <element signature="e#3534#3708#0" />
             <element signature="e#3753#4516#0" />
-            <element signature="e#4557#4972#0" />
             <element signature="n#!!doc;n#Render#0" />
-            <element signature="n#!!block;n#Render#0" />
-            <element signature="e#4717#5732#0" />
             <element signature="e#5775#5992#0" />
             <element signature="n#!!doc;n#appColor#0" />
-            <element signature="n#!!block;n#appColor#0" />
           </folding>
         </state>
       </provider>

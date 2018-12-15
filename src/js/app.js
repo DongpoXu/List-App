@@ -113,7 +113,7 @@ todoList.on("click", ".finish-task", function () {
     model.clearTask('LIST_TODO', $(this).siblings("i").text());
 });
 completedList.on("click", ".clear-task", function () {
-    model.clearTask('LIST_COMPLETE', $(this).siblings("i").text());
+    model.clearTask('LIST_COMPLETED', $(this).siblings("i").text());
 });
 
 /**
