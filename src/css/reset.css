@@ -43,3 +43,7 @@ input, textarea, button {
     outline: none;
     border: 0;
 }
+
+p, a, span, input, .appTitle, .okAddBtn {
+    font-family: "PingFang SC","Helvetica Neue","Hiragino Sans GB","WenQuanYi Micro Hei","Microsoft Yahei",sans-serif;
+}

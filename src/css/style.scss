@@ -32,17 +32,6 @@ header { /*顶部菜单栏样式*/
         position: absolute;
         top: 10px;
     }
-
-    //.appBackBtn { /*返回按钮*/
-    //    border-radius: 3px;
-    //    display: none;
-    //    height: 24px;
-    //    left: 5%;
-    //    padding: 5px;
-    //    position: absolute;
-    //    top: 15px;
-    //    width: 24px;
-    //}
 }
 
 main { /*主体部分*/
@@ -115,50 +104,54 @@ main { /*主体部分*/
 
     .addContent {
         background-color: #fff;
+        display: none;
         height: 100%;
-        left: 100%;
+        overflow: hidden;
         position: fixed;
-        top: 100%;
+        top: 0;
         width: 100%;
         z-index: 9;
-        -webkit-transition: all .2s ease-out;
-        -moz-transition: all .2s ease-out;
-        -o-transition: all .2s ease-out;
-        transition: all .2s ease-out;
 
-        textarea {
+        input {
             background-color: transparent;
-            border: 2px dotted #BDBDBD;
+            border-bottom: 2px dotted #BDBDBD;
             color: #212121;
             display: block;
             font-size: 22px;
             padding: 5px;
-            height: 40%;
+            height: 35px;
             margin: 80px auto 0;
             width: 90%;
         }
     }
 
     .btnBox { /*按钮*/
-        bottom: 7%;
-        cursor: pointer;
+        bottom: 3%;
+        //加入cursor会导致长按出现蓝色覆盖层
+        //cursor: pointer;
         position: fixed;
-        right: 10%;
+        right: 5%;
         z-index: 10;
 
         .addBtn {
             background-color: #FFC107;
             border-radius: 30px;
             bottom: 0;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
             color: #FFF;
             font-size: 30px;
             height: 60px;
             line-height: 60px;
+            outline: none;
             position: relative;
             right: 0;
             text-align: center;
             width: 60px;
             z-index: 1;
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            transition: all .2s ease;
         }
 
         .okAddBtn {
@@ -172,10 +165,10 @@ main { /*主体部分*/
             right: 0;
             text-align: center;
             width: 60px;
-            -webkit-transition: bottom .2s linear;
-            -moz-transition: bottom .2s linear;
-            -o-transition: bottom .2s linear;
-            transition: bottom .2s linear;
+            -webkit-transition: all .2s ease-out;
+            -moz-transition: all .2s ease-out;
+            -o-transition: all .2s ease-out;
+            transition: all .2s ease-out;
         }
     }
 }
