@@ -4,8 +4,8 @@
  * @author XDP
  */
 // 清除之前项目的本地存储数据
-// localStorage.removeItem("LIST_TODO");
-// localStorage.removeItem("LIST_COMPLETED");
+localStorage.removeItem("LIST_TODO");
+localStorage.removeItem("LIST_COMPLETED");
 
 let model = Model(),
     render = Render();
@@ -183,15 +183,13 @@ function Render() {
             tasks = localStorage[listName].split(",");
             for (let i = 1; i < tasks.length; i++) {
                 taskTitle = tasks[i];
-                let taskDom = parseDom(
+                ele.prepend(
                     "<li class='task-item'>"
                     + "<span class='task-title'>" + taskTitle + "</span>"
                     + "<i>" + i + "</i>"
                     + "<div class='clear-task fa fa-trash-o'>" + "</div>"
                     + "<div class='finish-task fa fa-check-circle-o'>" + "</div>"
                     + "</li>");
-                // 注意，insertBefore必须插入节点，不能是字符串
-                ele.insertBefore(taskDom[0], ele.childNodes[0]);
             }
         }
     };
