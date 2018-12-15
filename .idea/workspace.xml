@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9d922c23-77da-4a89-b2c6-287618809f1e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -15,27 +16,27 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.37559524">
+    <splitter split-orientation="horizontal" split-proportion="0.41011906">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1196">
-                  <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
+                <state relative-caret-position="458">
+                  <caret line="18" column="52" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/css/style.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+                <state relative-caret-position="260">
+                  <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
                   <folding>
-                    <element signature="e#86#673#0" />
                     <element signature="e#290#456#0" />
                     <element signature="e#474#671#0" />
+                    <element signature="e#680#3756#0" />
                     <element signature="e#763#929#0" />
                     <element signature="e#951#1164#0" />
                     <element signature="e#1181#1660#0" />
@@ -58,8 +59,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="556">
-                  <caret line="192" selection-start-line="192" selection-end-line="192" />
+                <state relative-caret-position="327">
+                  <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
                   <folding>
                     <element signature="e#273#333#0" />
                     <element signature="e#242#2172#0" />
@@ -76,6 +77,9 @@
                     <element signature="e#3753#4516#0" />
                     <element signature="e#4557#4972#0" />
                     <element signature="n#!!doc;n#Render#0" />
+                    <element signature="n#!!block;n#Render#0" />
+                    <element signature="e#4717#5732#0" />
+                    <element signature="e#5054#5726#0" />
                     <element signature="e#5775#5992#0" />
                     <element signature="n#!!doc;n#appColor#0" />
                     <element signature="n#!!block;n#appColor#0" />
@@ -102,6 +106,7 @@
       <find>z-index</find>
       <find>console</find>
       <find>clearTaskBtn</find>
+      <find>render</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,8 +132,8 @@
         <option value="$PROJECT_DIR$/ISSUE.md" />
         <option value="$PROJECT_DIR$/src/css/reset.css" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/css/style.scss" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/js/app.js" />
       </list>
     </option>
@@ -217,7 +222,7 @@
       <workItem from="1544612313428" duration="2565000" />
       <workItem from="1544615184653" duration="5339000" />
       <workItem from="1544662970381" duration="21683000" />
-      <workItem from="1544837755928" duration="13447000" />
+      <workItem from="1544837755928" duration="14384000" />
     </task>
     <task id="LOCAL-00001" summary="可以添加待做事项，localStorage缓存。">
       <created>1544695553442</created>
@@ -303,11 +308,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544882723554</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="去掉清除缓存">
+      <created>1544884305370</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1544884305370</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43034000" />
+    <option name="totallyTimeSpent" value="43971000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -463,21 +475,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1196">
-          <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="85" lean-forward="true" selection-start-line="85" selection-end-line="85" />
+        <state relative-caret-position="260">
+          <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
-            <element signature="e#86#673#0" />
             <element signature="e#290#456#0" />
             <element signature="e#474#671#0" />
+            <element signature="e#680#3756#0" />
             <element signature="e#763#929#0" />
             <element signature="e#951#1164#0" />
             <element signature="e#1181#1660#0" />
@@ -492,10 +497,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="192" selection-start-line="192" selection-end-line="192" />
+        <state relative-caret-position="327">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
           <folding>
             <element signature="e#273#333#0" />
             <element signature="e#242#2172#0" />
@@ -512,6 +524,9 @@
             <element signature="e#3753#4516#0" />
             <element signature="e#4557#4972#0" />
             <element signature="n#!!doc;n#Render#0" />
+            <element signature="n#!!block;n#Render#0" />
+            <element signature="e#4717#5732#0" />
+            <element signature="e#5054#5726#0" />
             <element signature="e#5775#5992#0" />
             <element signature="n#!!doc;n#appColor#0" />
             <element signature="n#!!block;n#appColor#0" />

@@ -4,8 +4,8 @@
  * @author XDP
  */
 // 清除之前项目的本地存储数据
-localStorage.removeItem("LIST_TODO");
-localStorage.removeItem("LIST_COMPLETED");
+// localStorage.removeItem("LIST_TODO");
+// localStorage.removeItem("LIST_COMPLETED");
 
 let model = Model(),
     render = Render();
@@ -19,11 +19,19 @@ let addBtn = $("#addBtn"),
     okAddBtn = $("#okAddBtn"),
     inputValue = $("#inputValue");
 
-let todoList = $("#todoList");
-let completedList = $("#completedList");
+let todoList = $("#todoList"),
+    completedList = $("#completedList");
+
+let appMenuBtn = $("#appMenuBtn");
 
 // 默认显示todo列表页面
 todoList.show();
+
+// 切换完成以及计划
+appMenuBtn.on("click",function () {
+    todoList.toggle();
+    completedList.toggle();
+});
 
 /**
  * @desc 添加任务按钮模块
@@ -140,10 +148,10 @@ function Model() {
             el;         // DOM对象
         if (listItem === "LIST_TODO") {
             listName = "LIST_TODO";
-            el = "todoList";
+            el = "#todoList";
         } else if (listItem === "LIST_COMPLETED") {
             listName = "LIST_COMPLETED";
-            el = "completedList";
+            el = "#completedList";
         }
         arr = localStorage[listName].split(',');
         arr.splice(i, 1);
@@ -167,23 +175,22 @@ function Render() {
         taskTitle;
 
     let init = function (e) {
-        let el = e || "todoList",
+        let el = e || "#todoList",
             listName;
-
-        if (el === "todoList") {
+        if (el === "#todoList") {
             listName = "LIST_TODO";
-        } else if (el === "completedList") {
+        } else if (el === "#completedList") {
             listName = "LIST_COMPLETED";
         }
 
-        let ele = document.getElementById(el);
-        ele.innerHTML = "";
+        appColor();
+        $(el).html("");
 
         if (localStorage[listName]) {
             tasks = localStorage[listName].split(",");
             for (let i = 1; i < tasks.length; i++) {
                 taskTitle = tasks[i];
-                ele.prepend(
+                $(el).prepend(
                     "<li class='task-item'>"
                     + "<span class='task-title'>" + taskTitle + "</span>"
                     + "<i>" + i + "</i>"
