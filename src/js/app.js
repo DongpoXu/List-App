@@ -106,14 +106,14 @@ appMenuBtn.on("click",function () {
  * @author XDP
  */
 todoList.on("click", ".clear-task", function () {
-    model.clearTask('LIST_TODO', $(this).parent().find('i').text);
+    model.clearTask('LIST_TODO', $(this).siblings("i").text());
 });
 todoList.on("click", ".finish-task", function () {
-    model.completeTask($(this).parent().find(".task-title").text());
-    model.clearTask('LIST_TODO', $(this).parent(".task-item").find('i').text);
+    model.completeTask($(this).siblings().find(".task-title").text());
+    model.clearTask('LIST_TODO', $(this).siblings("i").text());
 });
 completedList.on("click", ".clear-task", function () {
-    model.clearTask('LIST_COMPLETE', $(this).parent().find('i').text);
+    model.clearTask('LIST_COMPLETE', $(this).siblings("i").text());
 });
 
 /**
@@ -154,6 +154,7 @@ function Model() {
             el = "#completedList";
         }
         arr = localStorage[listName].split(',');
+        console.log(i);
         arr.splice(i, 1);
         localStorage.setItem(listName, arr);
         render.init(el);
