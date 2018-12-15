@@ -100,12 +100,10 @@ todoList.show();
 todoList.on("click", ".clear-task", function () {
     model.clearTask('LIST_TODO', $(this).parent().find('i').text);
 });
-
 todoList.on("click", ".finish-task", function () {
     model.completeTask($(this).parent().find(".task-title").text());
     model.clearTask('LIST_TODO', $(this).parent(".task-item").find('i').text);
 });
-
 completedList.on("click", ".clear-task", function () {
     model.clearTask('LIST_COMPLETE', $(this).parent().find('i').text);
 });
@@ -202,16 +200,18 @@ function Render() {
     };
 }
 
-/**
+/* 原生js使用，prepend()方法
+/!**
  * @desc 字符串转换为DOM节点
  * @date 2018-12-13
  * @author XDP
- */
+ *!/
 function parseDom(str) {
     let objE = document.createElement("div");
     objE.innerHTML = str;
     return objE.childNodes;
 }
+*/
 
 /**
  * @desc 换肤功能

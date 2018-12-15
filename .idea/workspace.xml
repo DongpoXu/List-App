@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d922c23-77da-4a89-b2c6-287618809f1e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -24,8 +20,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="678">
-                  <caret line="43" column="26" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="26" />
+                <state relative-caret-position="432">
+                  <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -61,8 +57,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/js/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="631">
-                  <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+                <state relative-caret-position="697">
+                  <caret line="220" column="12" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
                   <folding>
                     <element signature="e#273#333#0" />
                     <element signature="e#242#2172#0" />
@@ -70,9 +66,19 @@
                     <element signature="e#1140#1682#0" />
                     <element signature="e#1761#2168#0" />
                     <element signature="e#2226#2285#0" />
+                    <element signature="e#2457#2465#0" />
+                    <element signature="e#2607#2756#0" />
+                    <element signature="e#2809#2910#0" />
                     <element signature="n#!!doc;n#Model#0" />
+                    <element signature="n#!!block;n#Model#0" />
                     <element signature="e#3534#3708#0" />
+                    <element signature="e#3753#4516#0" />
                     <element signature="e#4557#4972#0" />
+                    <element signature="n#!!doc;n#Render#0" />
+                    <element signature="n#!!block;n#Render#0" />
+                    <element signature="e#5775#5992#0" />
+                    <element signature="n#!!doc;n#appColor#0" />
+                    <element signature="n#!!block;n#appColor#0" />
                   </folding>
                 </state>
               </provider>
@@ -211,7 +217,7 @@
       <workItem from="1544612313428" duration="2565000" />
       <workItem from="1544615184653" duration="5339000" />
       <workItem from="1544662970381" duration="21683000" />
-      <workItem from="1544837755928" duration="12618000" />
+      <workItem from="1544837755928" duration="12921000" />
     </task>
     <task id="LOCAL-00001" summary="可以添加待做事项，localStorage缓存。">
       <created>1544695553442</created>
@@ -294,7 +300,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42205000" />
+    <option name="totallyTimeSpent" value="42508000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -321,7 +327,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49583334" weight="0.328934" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49583334" visible="true" weight="0.328934" />
       <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.5005952" side_tool="true" weight="0.328934" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32994923" />
@@ -471,17 +477,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        <state relative-caret-position="697">
+          <caret line="220" column="12" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
           <folding>
             <element signature="e#273#333#0" />
             <element signature="e#242#2172#0" />
@@ -489,10 +488,27 @@
             <element signature="e#1140#1682#0" />
             <element signature="e#1761#2168#0" />
             <element signature="e#2226#2285#0" />
+            <element signature="e#2457#2465#0" />
+            <element signature="e#2607#2756#0" />
+            <element signature="e#2809#2910#0" />
             <element signature="n#!!doc;n#Model#0" />
+            <element signature="n#!!block;n#Model#0" />
             <element signature="e#3534#3708#0" />
+            <element signature="e#3753#4516#0" />
             <element signature="e#4557#4972#0" />
+            <element signature="n#!!doc;n#Render#0" />
+            <element signature="n#!!block;n#Render#0" />
+            <element signature="e#5775#5992#0" />
+            <element signature="n#!!doc;n#appColor#0" />
+            <element signature="n#!!block;n#appColor#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
         </state>
       </provider>
     </entry>
