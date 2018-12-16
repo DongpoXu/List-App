@@ -126,11 +126,11 @@ main { /*主体部分*/
     }
 
     .btn-box { /*按钮*/
-        bottom: 3%;
+        bottom: 10%;
         //加入cursor会导致长按出现蓝色覆盖层
         //cursor: pointer;
         position: fixed;
-        right: 5%;
+        right: 7%;
         z-index: 10;
 
         .add-btn {
