@@ -4,8 +4,8 @@
  * @author XDP
  */
 // 清除之前项目的本地存储数据
-localStorage.removeItem("LIST_TODO");
-localStorage.removeItem("LIST_COMPLETED");
+// localStorage.removeItem("LIST_TODO");
+// localStorage.removeItem("LIST_COMPLETED");
 
 let model = Model(),
     render = Render();
@@ -97,7 +97,7 @@ appMenuBtn.on("click", function () {
         }
     });
 
-    //对input绑定输入监听
+    // 对input绑定输入监听
     inputValue.on("input propertychange", function () {
         let vInput = inputValue.val();
         // 如果有输入则控件变色
@@ -112,9 +112,10 @@ appMenuBtn.on("click", function () {
         }
     });
 
-    // 切换标识颜色监听
-    // 刷新颜色值
-    // (completedList.css("display") === "block") ? appMenuBtn.css("color", "#ff9775") : appMenuBtn.css("color", "#FFFFFF");
+    // 监听切换颜色
+    setInterval(function(){
+        (completedList.css("display") === "block") ? appMenuBtn.css("color", "#ff9775") : appMenuBtn.css("color", "#FFFFFF");
+    },100);
 })();
 
 /**
