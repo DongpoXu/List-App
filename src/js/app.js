@@ -34,7 +34,7 @@ todoList.show(100);
  * @author XDP
  */
 appMenuBtn.on("click", function () {
-    (todoList.css("display") === "none") ? render.init('#todoList') : render.init('#completedList');
+    (todoList.css("display") === "none") ? render.init("#todoList") : render.init("#completedList");
     // 切换显示
     todoList.fadeToggle(100);
     completedList.fadeToggle(100);
@@ -61,16 +61,16 @@ appMenuBtn.on("click", function () {
             }).focus();
             //按钮旋转
             addBtn.css({
-                'transform': 'rotate(-45deg)',
-                '-webkit-transform': 'rotate(-45deg)'
+                "transform": "rotate(-45deg)",
+                "-webkit-transform": "rotate(-45deg)"
             });
             //弹出子按钮
             okAddBtn.css("bottom", "85px");
         } else {
             addContent.hide(100);
             addBtn.css({
-                'transform': 'rotate(0deg)',
-                '-webkit-transform': 'rotate(0deg)'
+                "transform": "rotate(0deg)",
+                "-webkit-transform": "rotate(0deg)"
             });
             okAddBtn.css("bottom", "0px");
         }
@@ -84,16 +84,16 @@ appMenuBtn.on("click", function () {
             inputValue.val("");
             addContent.fadeOut(100);
             addBtn.css({
-                'transform': 'rotate(0deg)',
-                '-webkit-transform': 'rotate(0deg)'
+                "transform": "rotate(0deg)",
+                "-webkit-transform": "rotate(0deg)"
             });
             okAddBtn.css("bottom", "0px");
             okAddBtn.css("background-color", "#757575");
             inputValue.css("border-bottom-color", "#BDBDBD");
             // TODO:关闭侧边栏和遮罩层
             // 切换到todo列表
-            $('#completedList').fadeOut(100);
-            $('#todoList').fadeIn(100);
+            $("#completedList").fadeOut(100);
+            $("#todoList").fadeIn(100);
         }
     });
 
@@ -113,9 +113,9 @@ appMenuBtn.on("click", function () {
     });
 
     // 监听切换颜色
-    setInterval(function(){
+    setInterval(function () {
         (completedList.css("display") === "block") ? appMenuBtn.css("color", "#ff9775") : appMenuBtn.css("color", "#FFFFFF");
-    },100);
+    }, 100);
 })();
 
 /**
@@ -124,18 +124,18 @@ appMenuBtn.on("click", function () {
  * @author XDP
  */
 todoList.on("click", ".clear-task", function () {
-    model.clearTask('LIST_TODO', $(this).siblings("i").text());
+    model.clearTask("LIST_TODO", $(this).siblings("i").text());
 });
 todoList.on("click", ".finish-task", function () {
     model.completeTask($(this).siblings(".task-title").text());
-    model.clearTask('LIST_TODO', $(this).siblings("i").text());
+    model.clearTask("LIST_TODO", $(this).siblings("i").text());
 });
 completedList.on("click", ".clear-task", function () {
-    model.clearTask('LIST_COMPLETED', $(this).siblings("i").text());
+    model.clearTask("LIST_COMPLETED", $(this).siblings("i").text());
 });
 completedList.on("click", ".finish-task", function () {
     model.redoTask($(this).siblings(".task-title").text());
-    model.clearTask('LIST_COMPLETED', $(this).siblings("i").text());
+    model.clearTask("LIST_COMPLETED", $(this).siblings("i").text());
 });
 
 /**
@@ -156,7 +156,7 @@ function Model() {
         let taskItem = localStorage["LIST_COMPLETED"];
         taskItem += "," + completeItem;
         localStorage.setItem("LIST_COMPLETED", taskItem);
-        let newArr = localStorage['LIST_COMPLETED'].split(',');
+        let newArr = localStorage["LIST_COMPLETED"].split(",");
         $("#completedList").prepend(
             "<li class='task-item'>"
             + "<span class='task-title'>" + completeItem + "</span>"
@@ -169,7 +169,7 @@ function Model() {
         let taskItem = localStorage["LIST_TODO"];
         taskItem += "," + redoItem;
         localStorage.setItem("LIST_TODO", taskItem);
-        let newArr = localStorage['LIST_TODO'].split(',');
+        let newArr = localStorage["LIST_TODO"].split(",");
         $("#todoList").prepend(
             "<li class='task-item'>"
             + "<span class='task-title'>" + redoItem + "</span>"
@@ -188,7 +188,7 @@ function Model() {
             listName = "LIST_COMPLETED";
             el = "#completedList";
         }
-        arr = localStorage[listName].split(',');
+        arr = localStorage[listName].split(",");
         arr.splice(i, 1);
         localStorage.setItem(listName, arr);
         render.init(el);
@@ -224,7 +224,6 @@ function Render() {
 
         appColor();
         $(el).html("");
-
 
         if (localStorage[listName]) {
             tasks = localStorage[listName].split(",");
@@ -264,10 +263,10 @@ function parseDom(str) {
  * @author XDP
  */
 function appColor() {
-    let mainColor = localStorage.APP_COLOR || "#238cee",
+    let mainColor = localStorage.getItem("APP_COLOR") || "#238cee",
         secColor = "#FFC107";
-    $('#header').css('background-color', mainColor);
-    $('#addBtn').css('background-color', secColor);
+    $("#header").css("background-color", mainColor);
+    $("#addBtn").css("background-color", secColor);
     return {
         mainColor: mainColor
     };
