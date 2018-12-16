@@ -43,14 +43,14 @@ main { /*主体部分*/
         display: none;
         margin: 0 auto;
         overflow: auto;
-        padding-bottom: 150px;  // 给添加按钮腾出地方
+        padding-bottom: 150px; // 给添加按钮腾出地方
         position: absolute;
         width: 100%;
     }
 
     .completed-list { /*完成事项*/
         display: none;
-        padding-bottom: 150px;  // 给添加按钮腾出地方
+        padding-bottom: 150px; // 给添加按钮腾出地方
         position: absolute;
         width: 100%;
 
@@ -126,12 +126,12 @@ main { /*主体部分*/
     }
 
     .btn-box { /*按钮*/
-        bottom: 10%;
+        bottom: 5%;
         //加入cursor会导致长按出现蓝色覆盖层
         //cursor: pointer;
-        margin-bottom: -30px;
+        margin: 0 10px 30px 0;
         position: fixed;
-        right: 7%;
+        right: 3%;
         z-index: 10;
 
         .add-btn {
