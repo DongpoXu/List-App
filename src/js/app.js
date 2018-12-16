@@ -4,8 +4,8 @@
  * @author XDP
  */
 // 清除之前项目的本地存储数据
-// localStorage.removeItem("LIST_TODO");
-// localStorage.removeItem("LIST_COMPLETED");
+localStorage.removeItem("LIST_TODO");
+localStorage.removeItem("LIST_COMPLETED");
 
 let model = Model(),
     render = Render();
@@ -25,16 +25,19 @@ let todoList = $("#todoList"),
 let appMenuBtn = $("#appMenuBtn");
 
 // 默认显示todo列表页面
-todoList.show();
+todoList.show(100);
 
-// 切换完成以及计划
+/**
+ * @desc 切换完成/计划项目
+ *       对列表进行渲染
+ * @date 2018-12-16
+ * @author XDP
+ */
 appMenuBtn.on("click", function () {
-    if ($("#completedList").html() === '') {
-        render.init('#completedList');
-    }
-    render.init('#completedList');
-    todoList.toggle();
-    completedList.toggle();
+    (todoList.css("display") === "none") ? render.init('#todoList') : render.init('#completedList');
+    // 切换显示
+    todoList.fadeToggle(100);
+    completedList.fadeToggle(100);
 });
 
 /**
@@ -44,11 +47,18 @@ appMenuBtn.on("click", function () {
  */
 (function () {
     // 添加新的任务
-    addBtn.click(function () {
+    addBtn.on("click", function () {
         if (addContent.css("display") === "none") {       // 判断添加任务页面是否存在
             // 移动任务页面
-            addContent.show("100");
-            inputValue.focus();
+            addContent.show(100);
+            inputValue.on({
+                "focus": function () {
+                    $(this).css("color", "#000");
+                },
+                "blur": function () {
+                    $(this).css("color", "#567");
+                },
+            }).focus();
             //按钮旋转
             addBtn.css({
                 'transform': 'rotate(-45deg)',
@@ -57,23 +67,22 @@ appMenuBtn.on("click", function () {
             //弹出子按钮
             okAddBtn.css("bottom", "85px");
         } else {
-            addContent.hide("100");
+            addContent.hide(100);
             addBtn.css({
                 'transform': 'rotate(0deg)',
                 '-webkit-transform': 'rotate(0deg)'
             });
             okAddBtn.css("bottom", "0px");
-
         }
     });
 
     // 确认添加任务
-    okAddBtn.click(function () {
+    okAddBtn.on("click", function () {
         let text = inputValue.val();
         if (text) {
             model.addTask(text);
             inputValue.val("");
-            addContent.fadeOut("100");
+            addContent.fadeOut(100);
             addBtn.css({
                 'transform': 'rotate(0deg)',
                 '-webkit-transform': 'rotate(0deg)'
@@ -83,13 +92,13 @@ appMenuBtn.on("click", function () {
             inputValue.css("border-bottom-color", "#BDBDBD");
             // TODO:关闭侧边栏和遮罩层
             // 切换到todo列表
-            $('#completedList').fadeOut();
-            $('#todoList').fadeIn();
+            $('#completedList').fadeOut(100);
+            $('#todoList').fadeIn(100);
         }
     });
 
     //对input绑定输入监听
-    inputValue.bind("input propertychange", function () {
+    inputValue.on("input propertychange", function () {
         let vInput = inputValue.val();
         // 如果有输入则控件变色
         if (vInput !== "") {
@@ -102,6 +111,10 @@ appMenuBtn.on("click", function () {
             inputValue.css("border-bottom-color", "#BDBDBD");
         }
     });
+
+    // 切换标识颜色监听
+    // 刷新颜色值
+    // (completedList.css("display") === "block") ? appMenuBtn.css("color", "#ff9775") : appMenuBtn.css("color", "#FFFFFF");
 })();
 
 /**
@@ -119,32 +132,49 @@ todoList.on("click", ".finish-task", function () {
 completedList.on("click", ".clear-task", function () {
     model.clearTask('LIST_COMPLETED', $(this).siblings("i").text());
 });
+completedList.on("click", ".finish-task", function () {
+    model.redoTask($(this).siblings(".task-title").text());
+    model.clearTask('LIST_COMPLETED', $(this).siblings("i").text());
+});
 
 /**
  * @desc 数据存储---本地
+ *       JSON.stringify()可以将JSON对象转换为字符串
+ *       JSON.parse()方法可以将字符串转换为JSON对象
  * @date 2018-12-13
  * @author XDP
  */
 function Model() {
     let addTask = function (addItem) {      // 添加
-        let taskItem = [localStorage["LIST_TODO"]];
-        taskItem.push(addItem);
+        let taskItem = localStorage.getItem("LIST_TODO");
+        taskItem += "," + addItem;
         localStorage.setItem("LIST_TODO", taskItem);
         render.init();
     };
     let completeTask = function (completeItem) {        // 完成
-        let taskItem = [localStorage["LIST_COMPLETED"]];
-        taskItem.push(completeItem);
+        let taskItem = localStorage["LIST_COMPLETED"];
+        taskItem += "," + completeItem;
         localStorage.setItem("LIST_COMPLETED", taskItem);
         let newArr = localStorage['LIST_COMPLETED'].split(',');
         $("#completedList").prepend(
             "<li class='task-item'>"
             + "<span class='task-title'>" + completeItem + "</span>"
             + "<i>" + (newArr.length - 1) + "</i>"
-            + "<div class='clear-task fa fa-trash-o'>" + "</div>"
-            + "<div class='finish-task fa fa-check-circle-o'>" + "</div>"
+            + "<div class='clear-task fa fa-trash-o'></div>"
             + "</li>");
         // 注意，如果使用原生JS，insertBefore必须插入节点，不能是字符串
+    };
+    let redoTask = function (redoItem) {        // 重做
+        let taskItem = localStorage["LIST_TODO"];
+        taskItem += "," + redoItem;
+        localStorage.setItem("LIST_TODO", taskItem);
+        let newArr = localStorage['LIST_TODO'].split(',');
+        $("#todoList").prepend(
+            "<li class='task-item'>"
+            + "<span class='task-title'>" + redoItem + "</span>"
+            + "<i>" + (newArr.length - 1) + "</i>"
+            + "<div class='clear-task fa fa-trash-o'></div>"
+            + "</li>");
     };
     let clearTask = function (listItem, i) {        // 删除
         let arr,        // 缓存数组
@@ -158,7 +188,6 @@ function Model() {
             el = "#completedList";
         }
         arr = localStorage[listName].split(',');
-        console.log(i);
         arr.splice(i, 1);
         localStorage.setItem(listName, arr);
         render.init(el);
@@ -166,6 +195,7 @@ function Model() {
     return {
         addTask: addTask,
         completeTask: completeTask,
+        redoTask: redoTask,
         clearTask: clearTask
     };
 }
@@ -181,15 +211,19 @@ function Render() {
 
     let init = function (e) {
         let el = e || "#todoList",
-            listName;
+            listName,
+            diffClass;
         if (el === "#todoList") {
             listName = "LIST_TODO";
+            diffClass = "<div class='finish-task fa fa-check-circle-o'></div>";
         } else if (el === "#completedList") {
             listName = "LIST_COMPLETED";
+            diffClass = "<div class='finish-task fa fa-refresh'></div>";
         }
 
         appColor();
         $(el).html("");
+
 
         if (localStorage[listName]) {
             tasks = localStorage[listName].split(",");
@@ -199,8 +233,8 @@ function Render() {
                     "<li class='task-item'>"
                     + "<span class='task-title'>" + taskTitle + "</span>"
                     + "<i>" + i + "</i>"
-                    + "<div class='clear-task fa fa-trash-o'>" + "</div>"
-                    + "<div class='finish-task fa fa-check-circle-o'>" + "</div>"
+                    + "<div class='clear-task fa fa-trash-o'></div>"
+                    + diffClass
                     + "</li>");
             }
         }
@@ -210,7 +244,7 @@ function Render() {
     };
 }
 
-/* 原生js使用，prepend()方法
+/* 原生js使用，替代prepend()方法
 /!**
  * @desc 字符串转换为DOM节点
  * @date 2018-12-13
