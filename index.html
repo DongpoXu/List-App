@@ -8,9 +8,10 @@
 </head>
 <body>
 <div class="app">
-    <header>
+    <header id="header">
         <div class="app-title">List-App</div>
         <div class="app-menu-btn fa fa-list-ul fa-2x" id="appMenuBtn"></div>
+        <div class="app-back-btn fa fa-chevron-left fa-2x" id="appBackBtn"></div>
     </header>
     <main>
         <!--待做事项-->
@@ -22,23 +23,35 @@
             <input type="text" id="inputValue" maxlength="128" placeholder="添加新的任务...">
         </div>
         <!--添加按钮-->
-        <div class="btn-box">
+        <div class="btn-box" id="btnBox">
             <div class="add-btn fa fa-plus" id="addBtn"></div>
             <div class="ok-add-btn" id="okAddBtn">确认</div>
         </div>
         <!--侧边栏-->
-        <div class="menu-content">
+        <div class="menu-content" id="menuContent">
             <ul class="menu-list">
-                <li class="menu-item"></li>
-                <li class="menu-item"></li>
-                <li class="menu-item"></li>
-                <li class="menu-item"></li>
+                <li class="menu-item" data="todo">
+                    <div class="fa fa-clock-o"></div>
+                    <span class="menu-text">待做事项</span>
+                </li>
+                <li class="menu-item" data="completed">
+                    <div class="fa fa-calendar-check-o"></div>
+                    <span class="menu-text">完成事项</span>
+                </li>
+                <li class="menu-item" data="changeColor">
+                    <div class="fa fa-compress"></div>
+                    <span class="menu-text">皮肤</span>
+                </li>
+                <li class="menu-item" data="about">
+                    <div class="fa fa-info-circle"></div>
+                    <span class="menu-text">关于</span>
+                </li>
             </ul>
         </div>
         <!--遮罩层-->
-        <div class="cover"></div>
+        <div class="cover" id="cover"></div>
         <!--提示框-->
-        <div class="menu-subCard"></div>
+        <div class="menu-sub-card" id="menuSubCard"></div>
     </main>
 </div>
 <script src="src/js/jquery-3.3.1/jquery-3.3.1.min.js"></script>

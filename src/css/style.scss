@@ -4,7 +4,7 @@
 @import url(reset.css);
 
 header { /*顶部菜单栏样式*/
-    background-color: #238cee;
+    background-color: #2196F3;
     box-shadow: rgba(0, 0, 0, 0.25) 0 4px 8px;
     height: 60px;
     left: 0;
@@ -25,6 +25,18 @@ header { /*顶部菜单栏样式*/
     .app-menu-btn { /*侧边栏按钮*/
         color: #fff;
         cursor: pointer;
+        height: 40px;
+        left: 5%;
+        line-height: 40px;
+        padding: 0;
+        position: absolute;
+        top: 10px;
+    }
+
+    .app-back-btn { /*侧边栏按钮*/
+        color: #fff;
+        cursor: pointer;
+        display: none;
         height: 40px;
         left: 5%;
         line-height: 40px;
@@ -169,6 +181,142 @@ main { /*主体部分*/
             -moz-transition: all .2s ease-out;
             -o-transition: all .2s ease-out;
             transition: all .2s ease-out;
+        }
+    }
+
+    .menu-content {
+        background-color: #fff;
+        height: 100%;
+        left: -260px;
+        position: fixed;
+        top: 0;
+        width: 250px;
+        z-index: 3;
+        -webkit-transition: all .3s ease-out;
+        -moz-transition: all .3s ease-out;
+        -o-transition: all .3s ease-out;
+        transition: all .3s ease-out;
+
+        .menu-list {
+            height: 300px;
+            margin-top: 80px;
+            width: 100%;
+
+            .menu-item {
+                cursor: pointer;
+                height: 60px;
+                position: relative;
+                -webkit-transition: all .3s;
+                -moz-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+
+                &:hover, &:active {
+                    background-color: #eee;
+                }
+
+                div {
+                    color: #777;
+                    font-size: 20px;
+                    height: 20px;
+                    margin: 20px 0 20px 35px;
+                    width: 20px;
+                }
+
+                .menu-text {
+                    color: #757575;
+                    font-size: 16px;
+                    left: 65px;
+                    letter-spacing: 1px;
+                    position: absolute;
+                    top: 21px;
+                }
+            }
+        }
+    }
+
+    .cover {
+        background-color: #000;
+        display: none;
+        height: 100%;
+        left: 0;
+        opacity: 0.4;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .menu-sub-card {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        width: 90%;
+        left: 5%;
+        top: 200px;
+        border-radius: 3px;
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+        animation: flyUp .4s;
+        -webkit-animation: flyUp .4s;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+
+        .aboutApp p {
+            width: 300px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 30px;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+    }
+
+    @keyframes flyUp {
+        to {
+            top: 160px;
+        }
+    }
+    @-webkit-keyframes flyUp {
+        to {
+            top: 160px;
+        }
+    }
+
+    .colorItem {
+        cursor: pointer;
+        height: 60px;
+        position: relative;
+
+        &:active {
+            background-color: #eee;
+        }
+
+        span {
+            color: #616161;
+            font-size: 20px;
+            left: 23%;
+            letter-spacing: 1px;
+            position: absolute;
+            top: 20px;
+        }
+        .colorBlock{
+            border-radius: 10px;
+            height: 20px;
+            position: absolute;
+            right: 26%;
+            top: 20px;
+            width: 20px;
+        }
+        .cGreen {
+            background-color: #25b99a;
+        }
+        .cRed {
+            background-color: #F44336;
+        }
+        .cBlue {
+            background-color: #2196F3;
         }
     }
 }

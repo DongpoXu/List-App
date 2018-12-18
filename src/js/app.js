@@ -8,7 +8,8 @@
 // localStorage.removeItem("LIST_COMPLETED");
 
 let model = Model(),
-    render = Render();
+    render = Render(),
+    menuItemFunc = MenuItemFunc();
 
 // 入口
 render.init();
@@ -22,7 +23,10 @@ let addBtn = $("#addBtn"),
 let todoList = $("#todoList"),
     completedList = $("#completedList");
 
-let appMenuBtn = $("#appMenuBtn");
+let appMenuBtn = $("#appMenuBtn"),
+    menuContent = $("#menuContent");
+
+let cover = $("#cover");
 
 // 默认显示todo列表页面
 todoList.show(100);
@@ -33,12 +37,14 @@ todoList.show(100);
  * @date 2018-12-16
  * @author XDP
  */
+/*
 appMenuBtn.on("click", function () {
     (todoList.css("display") === "none") ? render.init("#todoList") : render.init("#completedList");
     // 切换显示
     todoList.fadeToggle(100);
     completedList.fadeToggle(100);
 });
+*/
 
 /**
  * @desc 添加任务按钮模块
@@ -257,17 +263,168 @@ function parseDom(str) {
 }
 */
 
+// 呼出呼入菜单栏
+appMenuBtn.on("click", function () {
+    if (menuContent.css("left") === "-260px") {
+        menuContent.css("left", "0");
+        cover.fadeIn();
+    } else {
+        hideSidebar();
+        cover.fadeOut();
+    }
+});
+
+// 关闭侧边栏
+function hideSidebar() {
+    menuContent.css("left", "-260px");
+}
+
+//点击遮罩层隐藏关闭侧边栏
+cover.on("click", function () {
+    hideSidebar();
+    cover.fadeOut();
+});
+
 /**
- * @desc 换肤功能
- * @date 2018-12-15
+ * @desc 菜单栏调用页面
+ * @date 2018-12-18
  * @author XDP
  */
+$(".menu-item").on("click", function () {
+    hideSidebar();
+    let data = $(this).attr("data");
+    switch (data) {
+        case "todo" :
+            menuItemFunc.listPage("todo");
+            break;
+        case "completed":
+            menuItemFunc.listPage("completed");
+            break;
+        case "changeColor":
+            menuItemFunc.changeColor();
+            break;
+        case "about":
+            menuItemFunc.aboutApp();
+            break;
+        default:
+            console.log('no data');
+    }
+});
+
+function MenuItemFunc() {
+    let listPage = function (type) {
+        cover.fadeOut();
+        if (type === "todo") {
+            completedList.fadeOut();
+            todoList.fadeIn();
+        } else if (type === "completed") {
+            if (completedList.html() === '') {
+                render.init("#completedList");
+            }
+            render.init("#completedList");
+            todoList.fadeOut();
+            completedList.fadeIn();
+        }
+    };
+    let changeColor = function () {
+        subMenuPanel();
+        colorPanel();
+        // showHeaderBtn();
+    };
+    let aboutApp = function () {
+        subMenuPanel();
+        aboutPanel();
+    };
+    return {
+        listPage: listPage,
+        changeColor: changeColor,
+        aboutApp: aboutApp,
+    };
+}
+
+// 菜单卡片
+let subMenuPanel = function () {
+    $('#menuSubCard').fadeIn();
+    $('#appMenuBtn').fadeOut();
+    $('#appBackBtn').fadeIn();
+    //关闭当前菜单选项
+    $('#cover, #appBackBtn').on("click", function (event) {
+        cover.fadeOut();
+        $('#menuSubCard').fadeOut();
+        $('#appMenuBtn').fadeIn();
+        $('#appBackBtn').fadeOut();
+    });
+};
+
+// 换肤功能
 function appColor() {
-    let mainColor = localStorage.getItem("APP_COLOR") || "#238cee",
+    let mainColor = localStorage.getItem("APP_COLOR") || "#2196F3",
         secColor = "#FFC107";
     $("#header").css("background-color", mainColor);
     $("#addBtn").css("background-color", secColor);
     return {
         mainColor: mainColor
     };
+}
+
+//组装"换肤"面板
+function colorPanel() {
+    let html = "<ul class=setColorPanel>" +
+        "<li class=colorItem data=#25b99a>" +
+        "<span>Green</span>" +
+        "<div class='colorBlock cGreen'></div>" +
+        "</li>" +
+        "<li class=colorItem data=#F44336>" +
+        "<span>Red</span>" +
+        "<div class='colorBlock cRed'></div>" +
+        "</li>" +
+        "<li class=colorItem data=#2196F3>" +
+        "<span>Blue</span>" +
+        "<div class='colorBlock cBlue'></div>" +
+        "</li>" +
+        "</ul>";
+    $('#menuSubCard').html(html);
+    $('.colorItem').on("click", function () {
+        //颜色 本地存储
+        localStorage["APP_COLOR"] = $(this).attr('data');
+        appColor();
+        showHeaderBtn();
+    });
+}
+
+//组装"关于"面板
+function aboutPanel() {
+    let html = "<div class='aboutApp'><p><b>待办事项应用</b><br>当前为测试版本，持续更新中<br></p></div>";
+    $("#menuSubCard").html(html);
+}
+
+//滑动智能隐藏 header和btn
+(function () {
+    // let sctA = $(document).scrollTop(),
+    //     headerHeight = $('#header').height();
+    //
+    // $(window).scroll(function(event) {
+    //     let sctB = $(document).scrollTop();
+    //
+    //     if(sctB>headerHeight){
+    //         $('#header').addClass('headerUp');
+    //         $('.btnBox').addClass('btnDown');
+    //     }else{
+    //         $('#header').removeClass('headerUp');
+    //         $('.btnBox').removeClass('btnDown');
+    //     }
+    //     if(sctB>sctA){
+    //         $('#header').removeClass('headerDown');
+    //         $('.btnBox').removeClass('btnUp');
+    //     }else{
+    //         $('#header').addClass('headerDown');
+    //         $('.btnBox').addClass('btnUp');
+    //     }
+    //     sctA = $(document).scrollTop();
+    // });
+})();
+
+function showHeaderBtn() {
+    // $('#header').addClass('headerDown');
+    // $("#btnBox").addClass('btnUp');
 }
