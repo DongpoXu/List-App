@@ -343,15 +343,15 @@ function MenuItemFunc() {
 
 // 菜单卡片
 let subMenuPanel = function () {
-    $('#appMenuBtn').fadeOut(100);
+    $('#appMenuBtn').hide();
     $('#menuSubCard').fadeIn(100);
-    $('#appBackBtn').fadeIn(100);
+    $('#appBackBtn').show();
     //关闭当前菜单选项
     $('#cover, #appBackBtn').on("click", function () {
-        cover.fadeOut(100);
         $('#menuSubCard').fadeOut(100);
-        $('#appBackBtn').fadeOut(100);
-        $('#appMenuBtn').fadeIn(100);
+        $('#appBackBtn').hide();
+        cover.fadeOut(100);
+        $('#appMenuBtn').show();
     });
 };
 
