@@ -266,10 +266,10 @@ function parseDom(str) {
 appMenuBtn.on("click", function () {
     if (menuContent.css("left") === "-260px") {
         menuContent.css("left", "0");
-        cover.fadeIn();
+        cover.fadeIn(100);
     } else {
         hideSidebar();
-        cover.fadeOut();
+        cover.fadeOut(100);
     }
 });
 
@@ -281,7 +281,7 @@ function hideSidebar() {
 //点击遮罩层隐藏关闭侧边栏
 cover.on("click", function () {
     hideSidebar();
-    cover.fadeOut();
+    cover.fadeOut(100);
 });
 
 /**
@@ -312,17 +312,17 @@ $(".menu-item").on("click", function () {
 
 function MenuItemFunc() {
     let listPage = function (type) {
-        cover.fadeOut();
+        cover.fadeOut(100);
         if (type === "todo") {
-            completedList.fadeOut();
-            todoList.fadeIn();
+            completedList.fadeOut(100);
+            todoList.fadeIn(100);
         } else if (type === "completed") {
             if (completedList.html() === '') {
                 render.init("#completedList");
             }
             render.init("#completedList");
-            todoList.fadeOut();
-            completedList.fadeIn();
+            todoList.fadeOut(100);
+            completedList.fadeIn(100);
         }
     };
     let changeColor = function () {
@@ -343,15 +343,15 @@ function MenuItemFunc() {
 
 // 菜单卡片
 let subMenuPanel = function () {
-    $('#menuSubCard').fadeIn();
-    $('#appMenuBtn').fadeOut();
-    $('#appBackBtn').fadeIn();
+    $('#appMenuBtn').fadeOut(100);
+    $('#menuSubCard').fadeIn(100);
+    $('#appBackBtn').fadeIn(100);
     //关闭当前菜单选项
-    $('#cover, #appBackBtn').on("click", function (event) {
-        cover.fadeOut();
-        $('#menuSubCard').fadeOut();
-        $('#appMenuBtn').fadeIn();
-        $('#appBackBtn').fadeOut();
+    $('#cover, #appBackBtn').on("click", function () {
+        cover.fadeOut(100);
+        $('#menuSubCard').fadeOut(100);
+        $('#appBackBtn').fadeOut(100);
+        $('#appMenuBtn').fadeIn(100);
     });
 };
 
