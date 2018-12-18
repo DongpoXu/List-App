@@ -33,6 +33,17 @@ header { /*顶部菜单栏样式*/
         top: 10px;
     }
 
+    .app-change-btn { /*侧边栏按钮*/
+        color: #fff;
+        cursor: pointer;
+        height: 40px;
+        right: 5%;
+        line-height: 40px;
+        padding: 0;
+        position: absolute;
+        top: 10px;
+    }
+
     .app-back-btn { /*侧边栏按钮*/
         color: #fff;
         cursor: pointer;
@@ -301,7 +312,8 @@ main { /*主体部分*/
             position: absolute;
             top: 20px;
         }
-        .colorBlock{
+
+        .colorBlock {
             border-radius: 10px;
             height: 20px;
             position: absolute;
@@ -309,12 +321,15 @@ main { /*主体部分*/
             top: 20px;
             width: 20px;
         }
+
         .cGreen {
             background-color: #25b99a;
         }
+
         .cRed {
             background-color: #F44336;
         }
+
         .cBlue {
             background-color: #2196F3;
         }

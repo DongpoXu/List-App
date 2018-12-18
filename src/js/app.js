@@ -24,6 +24,7 @@ let todoList = $("#todoList"),
     completedList = $("#completedList");
 
 let appMenuBtn = $("#appMenuBtn"),
+    appChangeBtn = $("#appChangeBtn"),
     menuContent = $("#menuContent");
 
 let cover = $("#cover");
@@ -37,14 +38,12 @@ todoList.show(100);
  * @date 2018-12-16
  * @author XDP
  */
-/*
-appMenuBtn.on("click", function () {
+appChangeBtn.on("click", function () {
     (todoList.css("display") === "none") ? render.init("#todoList") : render.init("#completedList");
     // 切换显示
     todoList.fadeToggle(100);
     completedList.fadeToggle(100);
 });
-*/
 
 /**
  * @desc 添加任务按钮模块
@@ -372,16 +371,13 @@ function colorPanel() {
     let html = "<ul class=setColorPanel>" +
         "<li class=colorItem data=#25b99a>" +
         "<span>Green</span>" +
-        "<div class='colorBlock cGreen'></div>" +
-        "</li>" +
+        "<div class='colorBlock cGreen'></div></li>" +
         "<li class=colorItem data=#F44336>" +
         "<span>Red</span>" +
-        "<div class='colorBlock cRed'></div>" +
-        "</li>" +
+        "<div class='colorBlock cRed'></div></li>" +
         "<li class=colorItem data=#2196F3>" +
         "<span>Blue</span>" +
-        "<div class='colorBlock cBlue'></div>" +
-        "</li>" +
+        "<div class='colorBlock cBlue'></div></li>" +
         "</ul>";
     $('#menuSubCard').html(html);
     $('.colorItem').on("click", function () {
