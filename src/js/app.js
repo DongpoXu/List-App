@@ -11,8 +11,6 @@ let model = Model(),
     render = Render(),
     menuItemFunc = MenuItemFunc();
 
-
-    
 // 入口
 render.init();
 
