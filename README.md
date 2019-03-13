@@ -13,14 +13,17 @@
 ## 快速使用
 
 效果演示
+
 - [演示](https://aelousdp.github.io/List-App/)
 
 快速使用文档
+
 - [如何使用](./doc/use/README.md)
 
 ## 交流 & 提问
 
 注意，只受理接收以下提问方式，其他方式会被直接忽略
+
 - 直接在 [github issues](https://github.com/Aelousdp/List-App/issues) 提交问题
 
 每次升级版本修复的问题记录在[这里](./ISSUE.md)
@@ -31,6 +34,6 @@
 
 如果你感觉有收获，欢迎给我打赏---以激励我更多输出优质开源内容
 
-| 微信支付| 支付宝支付|
-|---|---|
-|<img src="img/WeChat.png" width="250" align=center>|<img src="img/Alipay.png" width="250" align=center>|
+| 微信支付                                            | 支付宝支付                                          |
+| --------------------------------------------------- | --------------------------------------------------- |
+| <img src="img/WeChat.png" width="250" align=center> | <img src="img/Alipay.png" width="250" align=center> |

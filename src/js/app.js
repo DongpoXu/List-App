@@ -39,7 +39,7 @@ todoList.show(100);
  * @author XDP
  */
 appChangeBtn.on("click", function () {
-    (todoList.css("display") === "none") ? render.init("#todoList") : render.init("#completedList");
+    (todoList.css("display") === "none") ? render.init("#todoList"): render.init("#completedList");
     // 切换显示
     todoList.fadeToggle(100);
     completedList.fadeToggle(100);
@@ -53,7 +53,7 @@ appChangeBtn.on("click", function () {
 (function () {
     // 添加新的任务
     addBtn.on("click", function () {
-        if (addContent.css("display") === "none") {       // 判断添加任务页面是否存在
+        if (addContent.css("display") === "none") { // 判断添加任务页面是否存在
             // 移动任务页面
             addContent.show(100);
             inputValue.on({
@@ -119,7 +119,7 @@ appChangeBtn.on("click", function () {
 
     // 监听切换颜色
     setInterval(function () {
-        (completedList.css("display") === "block") ? appMenuBtn.css("color", "#ff9775") : appMenuBtn.css("color", "#FFFFFF");
+        (completedList.css("display") === "block") ? appMenuBtn.css("color", "#ff9775"): appMenuBtn.css("color", "#FFFFFF");
     }, 100);
 })();
 
@@ -151,41 +151,41 @@ completedList.on("click", ".finish-task", function () {
  * @author XDP
  */
 function Model() {
-    let addTask = function (addItem) {      // 添加
+    let addTask = function (addItem) { // 添加
         let taskItem = localStorage.getItem("LIST_TODO");
         taskItem += "," + addItem;
         localStorage.setItem("LIST_TODO", taskItem);
         render.init();
     };
-    let completeTask = function (completeItem) {        // 完成
+    let completeTask = function (completeItem) { // 完成
         let taskItem = localStorage["LIST_COMPLETED"];
         taskItem += "," + completeItem;
         localStorage.setItem("LIST_COMPLETED", taskItem);
         let newArr = localStorage["LIST_COMPLETED"].split(",");
         $("#completedList").prepend(
-            "<li class='task-item'>"
-            + "<span class='task-title'>" + completeItem + "</span>"
-            + "<i>" + (newArr.length - 1) + "</i>"
-            + "<div class='clear-task fa fa-trash-o'></div>"
-            + "</li>");
+            "<li class='task-item'>" +
+            "<span class='task-title'>" + completeItem + "</span>" +
+            "<i>" + (newArr.length - 1) + "</i>" +
+            "<div class='clear-task fa fa-trash-o'></div>" +
+            "</li>");
         // 注意，如果使用原生JS，insertBefore必须插入节点，不能是字符串
     };
-    let redoTask = function (redoItem) {        // 重做
+    let redoTask = function (redoItem) { // 重做
         let taskItem = localStorage["LIST_TODO"];
         taskItem += "," + redoItem;
         localStorage.setItem("LIST_TODO", taskItem);
         let newArr = localStorage["LIST_TODO"].split(",");
         $("#todoList").prepend(
-            "<li class='task-item'>"
-            + "<span class='task-title'>" + redoItem + "</span>"
-            + "<i>" + (newArr.length - 1) + "</i>"
-            + "<div class='clear-task fa fa-trash-o'></div>"
-            + "</li>");
+            "<li class='task-item'>" +
+            "<span class='task-title'>" + redoItem + "</span>" +
+            "<i>" + (newArr.length - 1) + "</i>" +
+            "<div class='clear-task fa fa-trash-o'></div>" +
+            "</li>");
     };
-    let clearTask = function (listItem, i) {        // 删除
-        let arr,        // 缓存数组
-            listName,   // 本地缓存对象
-            el;         // DOM对象
+    let clearTask = function (listItem, i) { // 删除
+        let arr, // 缓存数组
+            listName, // 本地缓存对象
+            el; // DOM对象
         if (listItem === "LIST_TODO") {
             listName = "LIST_TODO";
             el = "#todoList";
@@ -235,12 +235,12 @@ function Render() {
             for (let i = 1; i < tasks.length; i++) {
                 taskTitle = tasks[i];
                 $(el).prepend(
-                    "<li class='task-item'>"
-                    + "<span class='task-title'>" + taskTitle + "</span>"
-                    + "<i>" + i + "</i>"
-                    + "<div class='clear-task fa fa-trash-o'></div>"
-                    + diffClass
-                    + "</li>");
+                    "<li class='task-item'>" +
+                    "<span class='task-title'>" + taskTitle + "</span>" +
+                    "<i>" + i + "</i>" +
+                    "<div class='clear-task fa fa-trash-o'></div>" +
+                    diffClass +
+                    "</li>");
             }
         }
     };
@@ -293,7 +293,7 @@ $(".menu-item").on("click", function () {
     hideSidebar();
     let data = $(this).attr("data");
     switch (data) {
-        case "todo" :
+        case "todo":
             menuItemFunc.listPage("todo");
             break;
         case "completed":
